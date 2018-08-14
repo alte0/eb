@@ -1,0 +1,95 @@
+.menu {
+    @extend .lists-unstyle;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-left: 4px;
+    &__item {
+        padding-bottom: 19px;
+        border-bottom: 2px solid transparent;
+        transition: border 0.3s linear;
+        &:hover {
+            border-bottom: 2px solid $color-red-orange;
+            & .menu__link {
+                color: $color-red-orange;
+            }
+        }
+        &_active {
+            border-bottom: 2px solid $color-red-orange;
+            & .menu__link {
+                color: $color-red-orange;
+            }
+        }
+    }
+    &__link {
+        color: $color-menu-link;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 1;
+        font-family: $Pragmatica;
+        font-weight: 500;
+        transition: color 0.3s linear;
+        text-transform: uppercase;
+    }
+
+    &-top {
+        @extend .lists-unstyle;
+        display: flex;
+        // justify-content: space-between;
+        justify-content: start;
+        width: 77.2357723572358%;
+        align-items: center;
+        // font-size: 0;
+        &__item {
+            font-size: 14px;
+            line-height: 1;
+            font-family: $Pragmatica;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &:not(:last-child) {
+                margin-right: auto;
+            }
+            &_user {
+                background-color: $color-pale-yellow-green;
+                padding: 6px;
+                padding-right: 20px;
+                border-radius: 20px;
+
+            }
+        }
+        &__icon {
+            margin-right: 20px;
+            &_mesage {
+                margin-right: 0;
+            }
+        }
+        &__number-messages {
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 8px;
+            line-height: 1;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            left: 18px;
+            transform: translateY(-54%);
+            color: white;
+            background-color: $color-red-orange;
+            padding: 3px;
+        }
+        &__img-user {
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        &__link {
+            color: $color-menu-top-link;
+            text-decoration: none;
+            // padding-left: 30px;
+            &_nopl {
+                // padding-left: 0;
+            }
+        }
+    }
+}

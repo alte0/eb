@@ -1,0 +1,55 @@
+mixin footer(data)
+    +b('footer').footer
+        +e.col
+            img.logo(src="__static__img/assets/footer/logo-footer.png", alt="ЕвразХолдинг" height="16" width="54")
+            +e.P.text-for-worker Мы ценим своих сотрудников и создаем  возможности для их профессионального развития и карьерного роста
+        +e.col
+            +e.H3.title_cro Горячая линия
+            +e.A.tel(href="tel:+78005558888") 8-800-555-88-88
+            +e.P.telfor для сотрудников российских предприятий
+            +e.A.tel(href="tel:+0800502118") 0-800-502-118
+            +e.P.telfor для сотрудников украинских предприятий
+            +e.A.tel(href="tel:+78000804358") 8-800-080-43-58
+            +e.P.telfor для сотрудников ЕВРАЗ Каспиан Сталь
+            +e.A.email(href="mailto:vopros@evraz.com") vopros@evraz.com
+            +e.A.write-lines(href="#") Написать в горячую линию
+        +e.col
+            +e.H3.title Биржевые котировки
+            +e.table
+                +e.caption 28 декабря 12:35 (GMT)
+                +e.tr
+                    +e.th_pt EVRAZ (LSE):
+                    +e.th_pt Открытие&#160;
+                        b 221,00
+                +e.tr
+                    +e.th 225.10 GBX
+                    +e.th Максимум&#160;
+                        b 238,80
+                +e.tr
+                    +e.th_cg 1.20 (0.54 %)
+                        +e.SPAN.treagle_up &#9650;
+                    +e.th Минимум&#160;
+                        b 221,00
+                +e.tr
+                    +e.th_divider
+                    +e.th_divider
+                +e.tr
+                    +e.th Raspadskaya (MCX):
+                    +e.th Открытие&#160;
+                        b 221,00
+                +e.tr
+                    +e.th 78.96 RUB
+                    +e.th Максимум&#160;
+                        b 238,80
+                +e.tr
+                    +e.th_pb._cg 0.65 (0.83 %)
+                        +e.SPAN.treagle_up &#9650;
+                    +e.th_pb Минимум&#160;
+                        b 221,00
+        +e.col
+            +e.H3.title Портал
+            +e('ul').lists
+                each val in ['Обратная связь', 'Карта разделов портала', 'Заявка в Service Desk', 'Помощь', 'Команда']
+                    +e('li').lists-item: +e('a').lists-link(href="#") #{val}
+
+            +e.P.error-text Если вы нашли ошибку, выделите ее курсором, нажмите одновременно клавиши «CTRL» и «ENTER» и мы скорректируем неточность.

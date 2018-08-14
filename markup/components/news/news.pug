@@ -1,0 +1,34 @@
+mixin news(data)
+    +b.news
+        +e.wrap-items
+            +e.item
+                +e.IMG.img(src="__static__img/content/news-1.jpg")
+                +e.inner-wrap
+                    +e.SPAN.departament_bg-cso ЮГ
+                    +e.A.link(href="#")
+                        +e.H3.title ЕВРАЗ передал здание шахты «МУК-96» Междуреченску
+                    +e.SPAN.date Сегодня
+            +e.item
+                +e.IMG.img(src="__static__img/content/news-2.jpg")
+                +e.inner-wrap
+                    +e.SPAN.departament_bg-cso ЮГ
+                    +e.A.link(href="#")
+                        +e.H3.title На теплоэлектроцентрали ЕВРАЗ Южкокса внедрили систему LOTO
+            +e.item
+                +e.IMG.img(src="__static__img/content/news-3.jpg")
+                +e.inner-wrap
+                    +e.SPAN.departament_bg-cro ЗСМК
+                    +e.A.link(href="#")
+                        +e.H3.title ЕВРАЗ ЗСМК посетили представители ключевого дилера строительного металлопроката
+                    +e.SPAN.date Вчера
+            +e.item
+                +e.IMG.img(src="__static__img/content/news-4.jpg")
+                +e.inner-wrap
+                    +e.SPAN.departament_bg-cho НТМК
+                    +e.A.link(href="#")
+                        +e.H3.title ЕВРАЗ НТМК повышает эффективность выплавки стали
+                    +e.SPAN.date 19 декабря
+
+        +e.btns-wrap
+            +e.A.btn_all-news(href="#") Все новости
+            +e.A.btn_my-region(href="#") Мой регион

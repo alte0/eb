@@ -1,0 +1,8 @@
+mixin menu(data)
+    +b('ul').menu
+        each val, index in data
+            if (index === 0)
+                +e('li').item_active: +e('a').link(href="#") #{val}
+            else
+                +e('li').item: +e('a').link(href="#") #{val}
+

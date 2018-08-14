@@ -1,0 +1,36 @@
+include ../menu/menu.pug
+
+mixin header(data)
+    +b.header
+        block
+        +e.top
+            .logo-wrap
+                img.logo(src="__static__img/assets/header/logo.png", alt="ЕвразХолдинг" height="20" width="69")
+                +b.department
+                    +e('span').text 73
+            +b('ul').menu-top
+                +e.item
+                    +e('img').icon(src="__static__img/general/icons-top-menu/bus.png", alt="иконка")
+                    +e.A.link(href="#") Автобусы
+                +e.item
+                    +e('img').icon(src="__static__img/general/icons-top-menu/canteen.png", alt="иконка")
+                    +e.A.link(href="#") Столовая
+                +e.item
+                    +e('img').icon(src="__static__img/general/icons-top-menu/floors.png", alt="иконка")
+                    +e.A.link(href="#") Этажи
+                +e.item
+                    +e('img').icon(src="__static__img/general/icons-top-menu/territories.png", alt="иконка")
+                    +e.A.link(href="#") Территории
+                +e.item
+                    +e('img').icon(src="__static__img/general/icons-top-menu/search.png", alt="иконка")
+                    +e.A.link(href="#") Поиск
+                +e.item
+                    +e('img').icon_mesage(src="__static__img/general/icons-top-menu/messages.png", alt="иконка")
+                    +e.SPAN.number-messages 12
+                    +e.A.link(href="#")
+                        span.visually-hidden Сообщения
+                +e('li').item_user
+                    +e('img').img-user(src="__static__img/content/user.jpg", alt="пользователь")
+                    +e.A.link_nopl(href="#") Александр
+        +e('nav').nav
+            +menu(menu)

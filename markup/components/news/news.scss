@@ -1,0 +1,104 @@
+.news {
+    padding-top: 17px;
+    padding-bottom: 61px;
+    &__wrap-items {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        margin-left: 10px;
+        margin-right: 10px;
+        // width: 17.88617886178862%;
+        width: 220px;
+    }
+    &__img {
+        object-fit: cover;
+    }
+    &__inner-wrap {
+        position: relative;
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+    &__departament {
+        display: inline-block;
+        position: absolute;
+        width: 46px;
+        height: 21px;
+        top: -72px;
+        left: 11px;
+        color: white;
+        font-size: 14px;
+        line-height: 19.6px;
+        font-family: $Pragmatica;
+        font-weight: 900;
+        padding: 7px;
+        padding-top: 32px;
+        &_bg-cso {
+            background-color: $color-shiny-orange;
+        }
+        &_bg-cro {
+            background-color: $color-red-orange;
+        }
+        &_bg-cho {
+            background-color: $color-high-orange;
+        }
+    }
+    &__link {
+        text-decoration: none;
+    }
+    &__title {
+        font-size: 13px;
+        line-height: 18.2px;
+        color: $color-news-title;
+        margin-top: 16px;
+        margin-bottom: 7px;
+    }
+    &__date {
+        font-size: 12px;
+        line-height: 14.4px;
+        color: $color-who-author;
+    }
+
+    &__btns-wrap {
+        display: flex;
+        justify-content: center;
+        padding-top: 35px;
+    }
+    &__btn {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 10px;
+        line-height: 1;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: 17px 34px 13px 44px;
+        background-color: $color-pale-yellow-green;
+        position: relative;
+        font-family: $Pragmatica;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        color: $color-news-title;
+        &_all-news {
+            padding-left: 51px;
+            padding-right: 27px;
+        }
+        &_all-news,
+        &_my-region {
+            &::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 16px;
+               margin: auto;
+           }
+        }
+        &_all-news::before {
+            @include bg($news);
+        }
+        &_my-region::before {
+            @include bg($pin);
+        }
+    }
+}

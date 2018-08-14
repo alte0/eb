@@ -1,0 +1,39 @@
+mixin slider(data)
+    +b.slider
+        +e.wrap-items
+            +e.item
+                +e.left-col
+                    +e.header
+                        +e('video').video(poster="__static__img/content/poster-video.jpg")
+                        +e.text-wrap
+                            +e('h3').title Евраз ТВ
+                            +e('p').desc 65-летие Рельсобалочного цеха ЕВРАЗ НТМК
+                    +e.content
+                        +e.H3.title-author Иванов Алексей
+                        +e.P.author-text Мы все хотим, чтобы ЕВРАЗ был эффективной компанией с высоким уровнем безопасности труда, ориентированной на запросы клиентов, поставляющей продукцию высокого качества…
+                        +e.P.who-author Старший Вице-президент, <br> Блок коммерции и развития бизнеса
+                +e.right-col
+                    +e.wrap-user
+                        +e.IMG.img-user(src="__static__img/assets/slider/user-2.jpg", alt="Царенко владимир" height="50" width="50")
+                        +e.DIV
+                            +e.H3.title-user Царенко Владимир
+                            +e.P.who-author Главный специалист ЕвразХолдинг
+                    +e.wrap-news_warning
+                        +e.H3.date 12 декабря
+                        +e.P.text-news_warning Встреча с представителями банка ВТБ 24
+                    +e.wrap-news_doc
+                        +e.H3.date 13 января
+                        +e.P.text-news О проведении в 2017 году соревнований по горным лыжам и сноуборду имени Андрея Севенюка
+
+        +e.wrap-btns
+            +e('button').btn-left
+                span.visually-hidden сладер влево
+            +e('button').btn-right
+                span.visually-hidden сладер вправо
+        +e('div').wrap-dots
+            +e('button').dot
+            +e('button').dot_active
+            +e('button').dot
+            +e('button').dot
+            +e('button').dot
+
