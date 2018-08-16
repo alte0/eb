@@ -5,7 +5,8 @@ mixin header(data)
         block
         +e.top
             .logo-wrap
-                img.logo(src="__static__img/assets/header/logo.png", alt="ЕвразХолдинг" height="20" width="69")
+                a(href="/")
+                    img.logo(src="__static__img/assets/header/logo.png", alt="ЕвразХолдинг" height="20" width="69")
                 +b.department
                     +e('span').text 73
             +b('ul').menu-top
